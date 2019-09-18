@@ -42,7 +42,5 @@ let petsData = [{
   }
 ];
 
-
-
 // Export to API Route
 module.exports = petsData;

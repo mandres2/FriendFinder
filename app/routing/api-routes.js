@@ -27,20 +27,20 @@ function apiRoutes(app) {
       scores: []
     };
     var scoresArray = [];
-    for(var i=0; i < req.body.scores.length; i++){
-      scoresArray.push( parseInt(req.body.scores[i]) )
+    for (var i = 0; i < req.body.scores.length; i++) {
+      scoresArray.push(parseInt(req.body.scores[i]))
     }
     newPet.scores = scoresArray;
 
 
     // Cross check the new pet entry with the existing ones
     var scoreComparisionArray = [];
-    for(var i=0; i < petsData.length; i++){
+    for (var i = 0; i < petsData.length; i++) {
 
       // Check each pet's scores and sum difference in points
       var currentComparison = 0;
-      for(var j=0; j < newPet.scores.length; j++){
-        currentComparison += Math.abs( newPet.scores[j] - petsData[i].scores[j] );
+      for (var j = 0; j < newPet.scores.length; j++) {
+        currentComparison += Math.abs(newPet.scores[j] - petsData[i].scores[j]);
       }
 
       // Push each comparison between pets to array
@@ -49,10 +49,10 @@ function apiRoutes(app) {
 
     // Determine the best match using the postion of best match in the petsData array
     var bestMatchPosition = 0; // assume its the first person to start
-    for(var i=1; i < scoreComparisionArray.length; i++){
+    for (var i = 1; i < scoreComparisionArray.length; i++) {
 
       // Lower number in comparison difference means better match
-      if(scoreComparisionArray[i] <= scoreComparisionArray[bestMatchPosition]){
+      if (scoreComparisionArray[i] <= scoreComparisionArray[bestMatchPosition]) {
         bestMatchPosition = i;
       }
 
