@@ -1,7 +1,7 @@
 /*
 @author: Micah Andres
 @github: mandres2
-@comment: Homework 13 - Friend Finder Express Node app
+@comment: Homework 13 - Pet Finder Express Node app
 */
 
 // Templated Pets Data
