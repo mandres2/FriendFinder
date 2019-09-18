@@ -1,7 +1,7 @@
 /*
 @author: Micah Andres
 @github: mandres2
-@comment: Homework 13 - Friend Finder Express Node app
+@comment: Homework 13 - Pet Finder Express Node app
 */
 
 console.log('API Route Connected Successfully');
@@ -20,7 +20,7 @@ function apiRoutes(app) {
   // A POST routes /api/pets. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
   app.post('/api/pets', function (req, res) {
 
-    // Parse new friend input to get integers (AJAX post seemed to make the numbers strings)
+    // Parse new pet input to get integers (AJAX post seemed to make the numbers strings)
     var Pets = {
       name: req.body.name,
       photo: req.body.photo,
@@ -30,17 +30,17 @@ function apiRoutes(app) {
     for(var i=0; i < req.body.scores.length; i++){
       scoresArray.push( parseInt(req.body.scores[i]) )
     }``
-    newFriend.scores = scoresArray;
+    newPet.scores = scoresArray;
 
 
-    // Cross check the new friend entry with the existing ones
+    // Cross check the new pet entry with the existing ones
     var scoreComparisionArray = [];
     for(var i=0; i < petsData.length; i++){
 
-      // Check each friend's scores and sum difference in points
+      // Check each pet's scores and sum difference in points
       var currentComparison = 0;
       for(var j=0; j < newPet.scores.length; j++){
-        currentComparison += Math.abs( newFriend.scores[j] - petsData[i].scores[j] );
+        currentComparison += Math.abs( newPet.scores[j] - petsData[i].scores[j] );
       }
 
       // Push each comparison between pets to array
@@ -59,7 +59,7 @@ function apiRoutes(app) {
     }
 
     // ***NOTE*** If the 2 pets have the same comparison, then the NEWEST entry in the petsData array is chosen
-    var bestFriendMatch = petsData[bestMatchPosition];
+    var bestPetMatch = petsData[bestMatchPosition];
 
 
 
@@ -68,8 +68,8 @@ function apiRoutes(app) {
 
 
 
-    // Push the new friend to the friends data array for storage
-    petsData.push(newFriend);
+    // Push the new pet to the pets data array for storage
+    petsData.push(newPet);
 
   });
 

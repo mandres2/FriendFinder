@@ -1,7 +1,7 @@
 <!--
 @author: Micah Andres
 @github: mandres2
-@comment: Homework 13 - Friend Finder Express Node app
+@comment: Homework 13 - Pet Finder Express Node app
 -->
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 
   <head>
     <!-- Tab Title -->
-    <title>Friend Finder | Quiz</title>
+    <title>Pet Finder | Quiz</title>
     <!-- Link in a tab icon, cuz why not -->
     <link rel="icon" href="http://www.freeiconspng.com/uploads/burn-burning-fire-flame-heat-icon--icon-search-engine-20.png">
     <!-- Latest compiled and minified CSS -->
@@ -24,7 +24,7 @@
 
       <!-- Quiz Page Title -->
       <div class="page-header">
-        <h1 style="font-size: 45px;"><span class="glyphicon glyphicon-fire" style="color: #d9534f;"></span> Friend Finder Quiz</h1>
+        <h1 style="font-size: 45px;"><span class="glyphicon glyphicon-fire" style="color: #d9534f;"></span> Pet Finder Quiz</h1>
       </div>
 
 
@@ -187,7 +187,7 @@
 
       <!-- Webpage Footer -->
       <footer class="footer">
-        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/tomtom28/friendfinder" target="_blank">GitHub Repo</a> | <a href="/">Home</a></p>
+        <p><a href="/api/pets">API Pets List</a> | <a href="https://github.com/mandres2/FriendFinder" target="_blank">GitHub Repo</a> | <a href="/">Home</a></p>
       </footer>
 
 
@@ -201,7 +201,7 @@
             <!-- "X" Button to close the modal -->
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h2 class="modal-title"><strong>Meet Your New Friend!</strong></h2>
+              <h2 class="modal-title"><strong>Meet Your New Pet!</strong></h2>
             </div>
 
             <!-- Modal Body (For Match Info) -->
@@ -304,8 +304,8 @@
 
       function collectInputs(){
 
-        // Make new friend object
-        var newFriend = {
+        // Make new pet object
+        var newPet = {
           name: $('#formName').val().trim(),
           photo: $('#formImage').val().trim(),
           scores: []
@@ -319,12 +319,12 @@
          // This counters the async behavior of $.each()
         .promise().done(function(){
 
-          // Push the array of scores to the new friend object
-          newFriend.scores = scoresArray;
+          // Push the array of scores to the new pet object
+          newPet.scores = scoresArray;
 
-          // POST the newFriend to the friends.js file and get back the best match
+          // POST the newPet to the pets.js file and get back the best match
           var currentURL = window.location.origin;
-          $.post(currentURL + "/api/friends", newFriend, function(data){
+          $.post(currentURL + "/api/pets", newPet, function(data){
 
             // Add Best Match attributes to Modal
             $('#matchName').text(data.name);
