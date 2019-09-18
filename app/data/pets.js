@@ -4,8 +4,8 @@
 @comment: Homework 13 - Friend Finder Express Node app
 */
 
-// Templated Friends Data
-var friendsData = [{
+// Templated Pets Data
+var petsData = [{
     name: "Tommy Thompson",
     photo: "https://avatars1.githubusercontent.com/u/17932981?v=3&s=466",
     scores: [3, 4, 3, 3, 4, 4, 4, 1, 5, 3]
@@ -45,4 +45,4 @@ var friendsData = [{
 
 
 // Export to API Route
-module.exports = friendsData;
+module.exports = petsData;

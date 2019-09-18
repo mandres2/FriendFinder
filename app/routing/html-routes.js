@@ -9,8 +9,7 @@ console.log('HTML Route Connected Successfully');
 
 
 // Node Dependencies
-var path = require('path');
-
+const path = require('path');
 
 // Includes Two Routes
 function htmlRoutes(app) {
