@@ -31,7 +31,7 @@ The primary motive was to solidify my understandings of the foundational concept
 <br>
 :black_small_square: Microsoft Studios Visual Code (v1.37.1)
 <br>
-:black_small_square: MySQL (Version 8.0.12)
+:black_small_square: Express
 <br>
 :black_small_square: Google Chrome
 <br>
@@ -41,9 +41,11 @@ The primary motive was to solidify my understandings of the foundational concept
 <br>
 
 ## npm Packages Used:
-:black_small_square: inquirer v7.0.0
+:black_small_square: express v4.17.1
 <br>
-:black_small_square: mysql v2.17.1
+:black_small_square: body-parser v1.19.0
+<br>
+:black_small_square: path v0.12.7
 
 ## Author
 
@@ -69,5 +71,3 @@ The primary motive was to solidify my understandings of the foundational concept
 :heavy_check_mark: 9.19 -
 <br>
 :heavy_check_mark: 9.20 -
-
-
