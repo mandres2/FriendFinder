@@ -21,7 +21,7 @@ function apiRoutes(app) {
   app.post('/api/pets', function (req, res) {
 
     // Parse new pet input to get integers (AJAX post seemed to make the numbers strings)
-    var Pets = {
+    var newPet = {
       name: req.body.name,
       photo: req.body.photo,
       scores: []
@@ -29,7 +29,7 @@ function apiRoutes(app) {
     var scoresArray = [];
     for(var i=0; i < req.body.scores.length; i++){
       scoresArray.push( parseInt(req.body.scores[i]) )
-    }``
+    }
     newPet.scores = scoresArray;
 
 
