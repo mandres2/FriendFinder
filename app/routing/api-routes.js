@@ -7,7 +7,7 @@
 console.log('API Route Connected Successfully');
 
 // Link in Pets Data
-var petsData = require('../data/pets');
+const petsData = require('../data/pets');
 
 // Includes Two Routes
 function apiRoutes(app) {
@@ -21,12 +21,12 @@ function apiRoutes(app) {
   app.post('/api/pets', function (req, res) {
 
     // Parse new pet input to get integers (AJAX post seemed to make the numbers strings)
-    var newPet = {
+    let newPet = {
       name: req.body.name,
       photo: req.body.photo,
       scores: []
     };
-    var scoresArray = [];
+    let scoresArray = [];
     for (var i = 0; i < req.body.scores.length; i++) {
       scoresArray.push(parseInt(req.body.scores[i]))
     }
@@ -34,12 +34,12 @@ function apiRoutes(app) {
 
 
     // Cross check the new pet entry with the existing ones
-    var scoreComparisionArray = [];
-    for (var i = 0; i < petsData.length; i++) {
+    let scoreComparisionArray = [];
+    for (let i = 0; i < petsData.length; i++) {
 
       // Check each pet's scores and sum difference in points
-      var currentComparison = 0;
-      for (var j = 0; j < newPet.scores.length; j++) {
+      let currentComparison = 0;
+      for (let j = 0; j < newPet.scores.length; j++) {
         currentComparison += Math.abs(newPet.scores[j] - petsData[i].scores[j]);
       }
 
@@ -48,8 +48,8 @@ function apiRoutes(app) {
     }
 
     // Determine the best match using the postion of best match in the petsData array
-    var bestMatchPosition = 0; // assume its the first person to start
-    for (var i = 1; i < scoreComparisionArray.length; i++) {
+    let bestMatchPosition = 0; // assume its the first person to start
+    for (let i = 1; i < scoreComparisionArray.length; i++) {
 
       // Lower number in comparison difference means better match
       if (scoreComparisionArray[i] <= scoreComparisionArray[bestMatchPosition]) {
@@ -59,7 +59,7 @@ function apiRoutes(app) {
     }
 
     // ***NOTE*** If the 2 pets have the same comparison, then the NEWEST entry in the petsData array is chosen
-    var bestPetMatch = petsData[bestMatchPosition];
+    let bestPetMatch = petsData[bestMatchPosition];
 
 
 
