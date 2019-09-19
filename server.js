@@ -17,7 +17,7 @@ const htmlRoutes = require('./app/routing/html-routes.js');
 let app = express();
 let PORT = process.env.PORT || 8080;
 
-// Sets up the Express app to handle data parsing
+// Sets up the Express app to handle data parsing --> This code is based off from the bodyParser API documentation.
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());

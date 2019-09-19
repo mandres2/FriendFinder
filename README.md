@@ -66,8 +66,8 @@ The primary motive was to solidify my understandings of the foundational concept
 <br>
 :heavy_check_mark: 9.17 - Reviewed requirements. Established repository, files, and began markdown on README.md. Started coding front-end/back-end.
 <br>
-:heavy_check_mark: 9.18 -
+:heavy_check_mark: 9.18 - Programming survey and pets data.
 <br>
-:heavy_check_mark: 9.19 -
+:heavy_check_mark: 9.19 - Debugging and fixing PATH for Heroku. Application is unable to depoly.
 <br>
 :heavy_check_mark: 9.20 -
