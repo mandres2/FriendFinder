@@ -70,4 +70,4 @@ The primary motive was to solidify my understandings of the foundational concept
 <br>
 :heavy_check_mark: 9.19 - Debugging and fixing PATH for Heroku. Application is unable to depoly.
 <br>
-:heavy_check_mark: 9.20 -
+:heavy_check_mark: 9.20 - PATH Fixed, Polishing application for deployment.
