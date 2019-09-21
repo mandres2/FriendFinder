@@ -18,7 +18,9 @@ The primary motive was to solidify my understandings of the foundational concept
 :black_small_square: Heroku
 
 ### Pet Finder:
-![alt text]()
+![alt text](https://github.com/mandres2/FriendFinder/blob/master/images/PNG/welcome_page_petFinder.png)
+
+![alt text](https://github.com/mandres2/FriendFinder/blob/master/images/PNG/API%20Pet%20List%20.png)
 
 
 ## Code Explanation
