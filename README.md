@@ -17,9 +17,16 @@ The primary motive was to solidify my understandings of the foundational concept
 <br>
 :black_small_square: Heroku
 
-### Demo:
+### Pet Finder:
 ![alt text]()
 
+
+## Code Explanation
+- `server.js` file sets up the Express server, specifying the port number, the npm packages that need to be loaded, and also the routes, which have externalized
+- There are 2 separate HTML files (`home.html` and `survey.html`) that serve as the front-end portion of the code; they determine what the user sees (the homepage and the survey, which will also show the resulting best match)
+- The 2 routing files (`html-routes.js` and `api-routes.js`) determine the back-end logic (based on the request being made, the response that gets sent to the browser); the HTML routes display the survey and the homepage based on the URL that is accessed, and the API routes send back existing content in the server-side data or add new pets
+- Best match is calculated by finding the pet with the minimal difference in scores and then sending that friend to the browser as a JSON object
+- A modal is then toggled, displaying the the best match to the person who just took the survey
 
 ## Deployment
 
@@ -68,6 +75,6 @@ The primary motive was to solidify my understandings of the foundational concept
 <br>
 :heavy_check_mark: 9.18 - Programming survey and pets data.
 <br>
-:heavy_check_mark: 9.19 - Debugging and fixing PATH for Heroku. Application is unable to depoly.
+:heavy_check_mark: 9.19 - Debugging and fixing PATH for Heroku. Application is unable to deploy.
 <br>
-:heavy_check_mark: 9.20 - PATH Fixed, Polishing application for deployment.
+:heavy_check_mark: 9.20 - PATH Fixed, Final touches, and deployed application.
