@@ -5,7 +5,8 @@ The primary motive was to solidify my understandings of the foundational concept
 
 ## Getting Started
 
-:black_small_square: <b>To get started:</b> You will need to have an updated IDE (preferably VS Code), and the latest version of Node.js, and an up-to-date version of Express, and Heroku.
+:black_small_square: <b>To get started:</b> 
+* You will need to have an updated IDE (preferably VS Code), and the latest version of Node.js, and an up-to-date version of Express, and Heroku.
 
 ### Prerequisites
 
