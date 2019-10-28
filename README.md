@@ -1,4 +1,4 @@
-# FriendFinder
+# PetFinder
 
 ## Motive:
 The primary motive was to solidify my understandings of the foundational concepts utilizing Express, and Heroku.
